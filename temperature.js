@@ -1,7 +1,7 @@
 window.onload = function () {
     resize_canvas()
 
-    var chart = new SmoothieChart({, millisPerPixel: 200, maxValueScale: 1.1, minValueScale: 1.1, scaleSmoothing: 0.1, grid: { fillStyle: '#ffffff', millisPerLine: 5000, verticalSections: 8 }, labels: { fillStyle: '#0000ff', fontSize: 18, precision: 1 }, timestampFormatter: SmoothieChart.timeFormatter }),
+    var chart = new SmoothieChart({millisPerPixel: 200, maxValueScale: 1.1, minValueScale: 1.1, scaleSmoothing: 0.1, grid: { fillStyle: '#ffffff', millisPerLine: 5000, verticalSections: 8 }, labels: { fillStyle: '#0000ff', fontSize: 18, precision: 1 }, timestampFormatter: SmoothieChart.timeFormatter }),
         canvas = document.getElementById('smoothie-chart'),
         series = new TimeSeries();
         average_array = []

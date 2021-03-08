@@ -1,0 +1,26 @@
+{
+	"": {
+		"project-id-version": "po2json",
+		"pot-creation-date": "2021-03-08 14:07:09+0800",
+		"po-revision-date": "2021-03-08 14:07:25+0800",
+		"last-translator": "bobwen<bobwen@tutanota.com>",
+		"language-team": "po2json",
+		"mime-version": "1.0",
+		"plural-forms": "nplurals=2; plural=(n != 1);",
+		"content-type": "text/plain; charset=UTF-8",
+		"content-transfer-encoding": "8bit",
+		"language": "zh-TW"
+ },
+	"CPU Temperature": [
+		"",
+		"处理器温度"
+	],
+	"Current Temperature:": [
+		"",
+		"当前温度:"
+	],
+	"Average Temperature (5m):": [
+		"",
+		"平均温度 (5分钟):"
+	]
+}

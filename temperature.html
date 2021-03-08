@@ -2,38 +2,58 @@
 <html>
 
 <head>
-    <title>Temperature</title>
-    <meta charset="utf-8">
-    <link href="../base1/cockpit.css" type="text/css" rel="stylesheet">
-    <script src="../base1/jquery.js"></script>
-    <script src="../base1/cockpit.js"></script>
-    <script type="text/javascript" src="smoothie.js"></script>
-    <script type="text/javascript" src="temperature.js"></script>
-
-<style>
-        tr {
-            font-size: 16pt
-        }
-    </style>
+	<meta charset="utf-8">
+	<title>Temperature</title>
+	<style>
+		body {
+			font-family: 'Courier New', Courier, monospace;
+		}
+		#table {
+			width:100%;
+		}
+		#table tr {
+			font-size: 16pt
+		}
+		#table [colspan="2"] {
+			text-align:center;
+			width:100%
+		}
+		#table #title {
+			font-size:24pt;
+		}
+		#table .key {
+			text-align:right;
+			width: 40%;
+			padding:.2rem;
+		}
+		#table .value {
+			text-align: left;
+			width: 60%;
+			padding: .2rem;
+		}
+	</style>
 </head>
 
 <body onresize="resize_canvas()">
-    <div align=center>
-        <table id=table style="width:100%;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
-            <tr>
-                <th colspan="2" style="font-size:24pt;text-align:center">CPU Temperature</th>
-            </tr>
-            <tr>
-                <td colspan="2" style="text-align:center;width:100%"><canvas id="smoothie-chart" height="300"></canvas></td>
-            </tr>
-            <tr>
-                <th style="text-align:right;width:40%;padding:4px">Current Temperature [°C]:</th><td id="cur_temp" style="text-align:left;width: 60%"></td>
-            </tr>
-            <tr>
-                <th style="text-align:right;padding:4px">Average Temperature [°C](5m):</th><td id=avg_temp style="text-align:left"></td>
-            </tr>
-        </table>
-    </div>
-</body>
+	<table id=table>
+		<tr>
+			<th colspan="2" id="title">CPU Temperature</th>
+		</tr>
+		<tr>
+			<td colspan="2"><canvas id="smoothie-chart" height="300"></canvas></td>
+		</tr>
+		<tr>
+			<td class="key">Current Temperature:</td>
+			<td class="value"><code id="cur_temp" ></code><code> °C</code></td>
+		</tr>
+		<tr>
+			<td class="key">Average Temperature (5m):</td>
+			<td class="value"><code id="avg_temp" ></code><code> °C</code></td>
+		</tr>
+	</table>
 
+	<script src="../base1/cockpit.js"></script>
+	<script src="smoothie.js"></script>
+	<script src="temperature.js"></script>
+</body>
 </html>

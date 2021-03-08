@@ -1,30 +1,29 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
 	<meta charset="utf-8">
 	<title>Temperature</title>
 	<style>
 		body {
-			font-family: 'Courier New', Courier, monospace;
+			font-family: "Courier New", Courier, monospace;
 		}
 		#table {
-			width:100%;
+			width: 100%;
 		}
 		#table tr {
 			font-size: 16pt
 		}
 		#table [colspan="2"] {
-			text-align:center;
-			width:100%
+			text-align: center;
+			width: 100%
 		}
 		#table #title {
-			font-size:24pt;
+			font-size: 24pt;
 		}
 		#table .key {
 			text-align:right;
 			width: 40%;
-			padding:.2rem;
+			padding: .2rem;
 		}
 		#table .value {
 			text-align: left;
@@ -33,9 +32,8 @@
 		}
 	</style>
 </head>
-
 <body onresize="resize_canvas()">
-	<table id=table>
+	<table id="table">
 		<tr>
 			<th colspan="2" id="title">CPU Temperature</th>
 		</tr>
@@ -43,16 +41,17 @@
 			<td colspan="2"><canvas id="smoothie-chart" height="300"></canvas></td>
 		</tr>
 		<tr>
-			<td class="key">Current Temperature:</td>
+			<td class="key" id="key_cur_temp">Current Temperature:</td>
 			<td class="value"><code id="cur_temp" ></code><code> °C</code></td>
 		</tr>
 		<tr>
-			<td class="key">Average Temperature (5m):</td>
+			<td class="key" id="key_avg_temp">Average Temperature (5m):</td>
 			<td class="value"><code id="avg_temp" ></code><code> °C</code></td>
 		</tr>
 	</table>
 
 	<script src="../base1/cockpit.js"></script>
+	<script src="../*/po.js"></script>
 	<script src="smoothie.js"></script>
 	<script src="temperature.js"></script>
 </body>

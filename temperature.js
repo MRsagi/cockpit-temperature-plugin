@@ -10,7 +10,7 @@ window.onload = function () {
     chart.streamTo(canvas, 500);
 
     function run_proc(series,average_array) {
-        var proc = cockpit.spawn(["vcgencmd","measure_temp"]);
+        var proc = cockpit.spawn(["vcgencmd","measure_temp"], {"superuser":"require"});
         proc.done(function(data){
             pt = parseFloat(data.match(/([0-9\.]+)/)[1]);
             series.append(new Date().getTime(), pt);
